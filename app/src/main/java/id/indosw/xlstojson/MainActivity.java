@@ -16,9 +16,6 @@ import org.apache.poi.hssf.usermodel.HSSFSheet;
 import java.util.ArrayList;
 import id.indosw.fileutil.FileUtil;
 
-import id.indosw.xlstojson.kt.ExcelConverter;
-
-
 public class MainActivity extends Activity {
 
     public final int REQ_CD_PICK = 101;
@@ -35,7 +32,7 @@ public class MainActivity extends Activity {
     }
 
     private void initLogic() {
-        pick.setType("application/*");
+        pick.setType("*/*");
         pick.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
     }
 
