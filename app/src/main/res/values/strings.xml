@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">XlsToJson</string>
+    <string name="pick_file">Pick File</string>
+    <string name="rationale_doc_picker">We need this permission to read documents from device.</string>
+    <string name="path">path</string>
+</resources>

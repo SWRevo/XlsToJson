@@ -1,0 +1,3 @@
+rootProject.name = "XlsToJson"
+include ':app'
+include ':fileutil'
