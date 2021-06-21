@@ -2,8 +2,70 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/darkBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".java.JsonToExcelActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="25dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="17dp"
+            android:textColor="@color/purple_200"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textSize="25sp"
+            android:text="@string/paste_json_data"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/jsonStringData"
+                android:background="@drawable/bg_button_transparent"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Paste JSON Data Here"
+                android:gravity="start"
+                android:padding="17dp"
+                android:layout_margin="11dp"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-condensed"
+                tools:ignore="Autofill,HardcodedText,TextFields" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/convertJsonToXls"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="17dp"
+            android:gravity="center"
+            android:padding="3dp"
+            android:background="@drawable/bg_button_transparent"
+            android:textSize="18sp"
+            android:textColor="@color/purple_200"
+            android:text="@string/convert_json_to_xls"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/pathFileText"
+            android:textSize="12sp"
+            android:textColor="@color/teal_200"
+            android:text="@string/path"
+            android:layout_margin="7dp"/>
+    </LinearLayout>
 
 </LinearLayout>

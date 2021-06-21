@@ -1,5 +1,5 @@
 rootProject.name = "XlsToJson"
 include ':app'
 include ':fileutil'
-//include ':crashreport'
+include ':crashreport'
 include ':jsonviewer'

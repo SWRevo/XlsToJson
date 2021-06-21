@@ -8,4 +8,5 @@
     <string name="excel_to_json">EXCEL to JSON</string>
     <string name="expend">Expend</string>
     <string name="collapse">Collapse</string>
+    <string name="paste_json_data">Paste JSON Data</string>
 </resources>
