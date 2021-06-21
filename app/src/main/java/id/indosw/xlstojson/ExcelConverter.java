@@ -44,7 +44,8 @@ public class ExcelConverter {
     private String getCellAsString(HSSFCell cell) {
         String value = null;
         if (cell != null) {
-            if (cell.getCellType() == CellType.NUMERIC) {
+            //if (cell.getCellType() == CellType.NUMERIC) {
+            if (cell.getCellTypeEnum() == CellType.NUMERIC) {
                 cell.setCellType(CellType.STRING);
             }
             value = cell.getStringCellValue();

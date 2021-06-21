@@ -29,8 +29,8 @@ class ExcelConverter {
     private fun getCellAsString(cell: HSSFCell?): String? {
         var value: String? = null
         if (cell != null) {
-            if (cell.cellType == CellType.NUMERIC) {
-                cell.cellType = CellType.STRING
+            if (cell.cellTypeEnum == CellType.NUMERIC) {
+                cell.setCellType(CellType.STRING)
             }
             value = cell.stringCellValue
         }
