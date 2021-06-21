@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="JsonViewer.TextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textColor">@color/jsonViewer_textColorNull</item>
+    </style>
+
+</resources>

@@ -13,20 +13,34 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import org.apache.poi.hssf.usermodel.HSSFSheet;
-import java.util.ArrayList;
-import id.indosw.fileutil.FileUtil;
 
-public class MainActivity extends Activity {
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import id.indosw.fileutil.FileUtil;
+import id.indosw.xlstojson.jsonstringtoxls.ConvertJsonToExcel;
+import id.indosw.xlstojson.jsonstringtoxls.Customer;
+
+public class MainActivity extends Activity /*implements Crasher.OnCrashListener*/ {
 
     public final int REQ_CD_PICK = 101;
     private final Intent pick = new Intent(Intent.ACTION_GET_CONTENT);
     private EditText editText;
     private TextView pathFileText;
+    private List<Customer> customers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        /*Crasher crasher = new Crasher(this);
+        crasher.addListener(this);
+        crasher.setEmail("luthfi.otoclash@gmail.com");
+        //crasher.setForceStackOverflow(true);
+        crasher.setCrashActivityEnabled(true);*/
+
         initView();
         initLogic();
     }
@@ -50,11 +64,34 @@ public class MainActivity extends Activity {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private void initView() {
         Button button = findViewById(R.id.pickFile);
         editText = findViewById(R.id.responseText);
         pathFileText = findViewById(R.id.pathFileText);
-        button.setOnClickListener(v -> pickDocClicked());
+        button.setOnClickListener(v -> {
+            //pickDocClicked();
+            pathFileText.setText("Ready Convert");
+            runConvertJsonToXls();
+        });
+    }
+
+    @SuppressLint("SdCardPath")
+    private void runConvertJsonToXls() {
+        String jsonStr = "[{\"id\":\"1\",\"name\":\"Ravishankar Kumar\",\"address\":\"Bangalore\",\"age\":32},{\"id\":\"2\",\"name\":\"Chulbul Yadav\",\"address\":\"Motihari\",\"age\":27},{\"id\":\"3\",\"name\":\"Mirchae Devi\",\"address\":\"Buxcer\",\"age\":26},{\"id\":\"4\",\"name\":\"Deepak Jha\",\"address\":\"Mithila\",\"age\":33},{\"id\":\"5\",\"name\":\"Shilpa Rani\",\"address\":\"Nala Road\",\"age\":36}]";
+        try {
+            customers = ConvertJsonToExcel.convertJsonString2Objects(jsonStr);
+        } catch (Exception e){
+            pathFileText.setText(e.getMessage());
+        }
+        pathFileText.setText(customers.toString());
+
+        try {
+            ConvertJsonToExcel.writeObjects2ExcelFile(customers, "/storage/emulated/0/Download/customers.xlsx");
+        } catch (IOException e) {
+            e.printStackTrace();
+            pathFileText.setText(e.getMessage());
+        }
     }
 
     @SuppressLint("ObsoleteSdkInt")
@@ -115,4 +152,7 @@ public class MainActivity extends Activity {
             }
         }
     }
+
+    /*@Override
+    public void onCrash(Thread thread, Throwable throwable) {}*/
 }

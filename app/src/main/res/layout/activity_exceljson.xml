@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/darkBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".java.ExcelToJsonActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/pickFile"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="17dp"
+            android:gravity="center"
+            android:padding="3dp"
+            android:background="@drawable/bg_button_transparent"
+            android:textSize="14sp"
+            android:textColor="@color/purple_200"
+            android:text="@string/pick_file"
+            style="?android:attr/buttonBarButtonStyle" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pathFileText"
+        android:textSize="12sp"
+        android:textColor="@color/teal_200"
+        android:text="@string/path"
+        android:layout_margin="7dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="11dp"
+        android:orientation="vertical">
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="115dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/bg_button_transparent"
+                    android:onClick="onClickExpend"
+                    android:gravity="center"
+                    android:text="@string/expend"
+                    android:textSize="12sp"
+                    android:textColor="@color/purple_200"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+                    android:layout_width="125dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="17dp"
+                    android:background="@drawable/bg_button_transparent"
+                    android:onClick="onClickCollapse"
+                    android:gravity="center"
+                    android:text="@string/collapse"
+                    android:textSize="12sp"
+                    android:textColor="@color/purple_200"
+                    style="?android:attr/buttonBarButtonStyle" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <ScrollView
+            android:id="@+id/ll_root_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <id.indosw.jsonviewer.JsonViewer
+                android:id="@+id/jsonViewer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

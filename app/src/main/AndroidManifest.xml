@@ -4,8 +4,10 @@
     package="id.indosw.xlstojson">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
+        android:name=".Application"
         android:requestLegacyExternalStorage="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,13 +16,15 @@
         android:supportsRtl="true"
         tools:ignore="AllowBackup">
         <!--android:theme="@style/Theme.XlsToJson"-->
-        <activity android:name=".kt.MainKtActivity">
+        <activity android:name=".SelectorActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".kt.MainKtActivity" />
+        <activity android:name=".java.ExcelToJsonActivity" />
         <activity android:name=".MainActivity" />
 
 

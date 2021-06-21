@@ -3,21 +3,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="11dp"
     android:background="@color/white"
     android:orientation="vertical"
-    android:gravity="center"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/pickFile"
-        android:layout_width="200dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="8dp"
-        android:background="@drawable/background_right"
-        android:textSize="17sp"
-        android:textColor="@color/white"
-        android:text="@string/pick_file"/>
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/pickFile"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="3dp"
+            android:background="@drawable/background_right"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:text="@string/pick_file"
+            style="?android:attr/buttonBarButtonStyle" />
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -36,7 +43,7 @@
 
     <EditText
         android:id="@+id/responseText"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="11dp"
         android:hint="Response"
