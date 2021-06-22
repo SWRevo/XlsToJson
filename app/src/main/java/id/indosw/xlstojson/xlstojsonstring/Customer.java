@@ -13,6 +13,7 @@ public class Customer {
         super();
     }
 
+    @SuppressWarnings("unused")
     public Customer(String id, String name, String address, int age) {
         super();
         this.id = id;
@@ -37,6 +38,7 @@ public class Customer {
         this.name = name;
     }
 
+    @SuppressWarnings("unused")
     public String getAddress() {
         return address;
     }
@@ -45,6 +47,7 @@ public class Customer {
         this.address = address;
     }
 
+    @SuppressWarnings("unused")
     public int getAge() {
         return age;
     }

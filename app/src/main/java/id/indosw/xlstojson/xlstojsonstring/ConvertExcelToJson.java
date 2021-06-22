@@ -26,7 +26,7 @@ public class ConvertExcelToJson {
             Sheet sheet = workbook.getSheet("Customers");
             Iterator<Row> rows = sheet.iterator();
 
-            List<Customer> lstCustomers = new ArrayList<Customer>();
+            List<Customer> lstCustomers = new ArrayList<>();
 
             int rowNumber = 0;
             while (rows.hasNext()) {

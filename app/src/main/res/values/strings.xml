@@ -6,7 +6,7 @@
     <string name="convert_json_to_xls">Convert JSON to XLS</string>
     <string name="json_to_excel">JSON to EXCEL</string>
     <string name="excel_to_json">EXCEL to JSON</string>
-    <string name="expend">Expend</string>
-    <string name="collapse">Collapse</string>
+    <string name="expend">⤋</string>
+    <string name="collapse">⤊</string>
     <string name="paste_json_data">Paste JSON Data</string>
 </resources>

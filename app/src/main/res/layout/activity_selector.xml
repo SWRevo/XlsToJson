@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:padding="11dp"
-    android:background="@color/darkBackground"
     android:orientation="vertical"
     tools:context=".SelectorActivity">
 
@@ -29,7 +28,7 @@
             android:textColor="@color/purple_200"
             android:text="@string/json_to_excel"
             android:onClick="goJsonToExcel"
-            style="?android:attr/buttonBarButtonStyle" />
+            tools:ignore="UsingOnClickInXml" />
 
         <Button
             android:id="@+id/excelToJson"
@@ -45,7 +44,7 @@
             android:textColor="@color/purple_200"
             android:text="@string/excel_to_json"
             android:onClick="goExcelToJson"
-            style="?android:attr/buttonBarButtonStyle" />
+            tools:ignore="UsingOnClickInXml" />
     </LinearLayout>
 
 </LinearLayout>

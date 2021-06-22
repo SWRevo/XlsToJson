@@ -3,7 +3,7 @@
 
     <style name="JsonViewer.TextAppearance" parent="TextAppearance.AppCompat">
         <item name="android:fontFamily">monospace</item>
-        <item name="android:textColor">@color/jsonViewer_textColorNull</item>
+        <item name="android:textColor">#E0E0E0</item>
     </style>
 
 </resources>

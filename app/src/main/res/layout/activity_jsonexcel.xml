@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@color/darkBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".java.JsonToExcelActivity">
@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingBottom="25dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
         <TextView
             android:layout_width="match_parent"
@@ -54,18 +55,45 @@
             android:background="@drawable/bg_button_transparent"
             android:textSize="18sp"
             android:textColor="@color/purple_200"
-            android:text="@string/convert_json_to_xls"
-            style="?android:attr/buttonBarButtonStyle" />
+            android:text="@string/convert_json_to_xls"/>
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:id="@+id/pathFileText"
-            android:textSize="12sp"
-            android:textColor="@color/teal_200"
-            android:text="@string/path"
-            android:layout_margin="7dp"/>
+            android:padding="8dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_microsoft_excel"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:id="@+id/pathFileText"
+                android:textSize="12sp"
+                android:textColor="@color/teal_200"
+                android:text="@string/path"
+                android:layout_margin="7dp"/>
+
+            <ImageView
+                android:id="@+id/openExcelFile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                android:padding="11dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_baseline_open_in_new_196"
+                tools:ignore="ContentDescription"
+                app:tint="@color/teal_200" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

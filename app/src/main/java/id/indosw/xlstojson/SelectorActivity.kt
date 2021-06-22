@@ -2,14 +2,14 @@
 
 package id.indosw.xlstojson
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import id.indosw.xlstojson.java.ExcelToJsonActivity
+import androidx.appcompat.app.AppCompatActivity
+import id.indosw.xlstojson.java.ExcelToJson2Activity
 import id.indosw.xlstojson.java.JsonToExcelActivity
 
-class SelectorActivity : Activity() {
+class SelectorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_selector)
@@ -23,7 +23,7 @@ class SelectorActivity : Activity() {
 
     fun goExcelToJson(view: View?) {
         val intentXlsToJson = Intent()
-        intentXlsToJson.setClass(applicationContext, ExcelToJsonActivity::class.java)
+        intentXlsToJson.setClass(applicationContext, ExcelToJson2Activity::class.java)
         startActivity(intentXlsToJson)
     }
 }
