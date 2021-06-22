@@ -6,8 +6,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import id.indosw.xlstojson.java.ExcelToJson2Activity
-import id.indosw.xlstojson.java.JsonToExcelActivity
+import id.indosw.xlstojson.kotlin.ExcelToJson2Activity
+import id.indosw.xlstojson.kotlin.JsonToExcelActivity
 
 class SelectorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

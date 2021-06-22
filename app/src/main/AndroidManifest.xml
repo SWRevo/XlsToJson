@@ -27,6 +27,9 @@
         <activity android:name=".java.ExcelToJsonActivity" />
         <activity android:name=".java.JsonToExcelActivity" />
         <activity android:name=".java.ExcelToJson2Activity" />
+        <activity android:name=".kotlin.ExcelToJson2Activity" />
+        <activity android:name=".kotlin.ExcelToJsonActivity" />
+        <activity android:name=".kotlin.JsonToExcelActivity" />
 
 
         <provider

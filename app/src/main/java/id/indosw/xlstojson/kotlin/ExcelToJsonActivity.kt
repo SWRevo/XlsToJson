@@ -104,7 +104,9 @@ class ExcelToJsonActivity : AppCompatActivity(), OnCrashListener {
             val sheet = converter.loadExcel(file)
             val json = converter.excelToJson(sheet, "S")
             println(json)
-            showJsonToView(json)
+            if (json != null) {
+                showJsonToView(json)
+            }
         } catch (e: Exception) {
             e.printStackTrace()
             pathFileText!!.text = e.message

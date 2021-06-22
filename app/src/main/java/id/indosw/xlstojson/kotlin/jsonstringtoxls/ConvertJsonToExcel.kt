@@ -13,12 +13,12 @@ import java.io.IOException
 @Suppress("LocalVariableName", "SpellCheckingInspection")
 object ConvertJsonToExcel {
     @Suppress("LocalVariableName")
-    fun convertJsonString2Objects(jsonString: String?): List<Customer?>? {
-        var customers: List<Customer?>? = null
+    fun convertJsonString2Objects(jsonString: String?): List<Customer>? {
+        var customers: List<Customer>? = null
         @Suppress("LocalVariableName")
         try {
             customers =
-                ObjectMapper().readValue(jsonString, object : TypeReference<List<Customer?>?>() {})
+                ObjectMapper().readValue(jsonString, object : TypeReference<List<Customer>?>() {})
         } catch (e: JsonParseException) {
             e.printStackTrace()
         } catch (e: JsonMappingException) {

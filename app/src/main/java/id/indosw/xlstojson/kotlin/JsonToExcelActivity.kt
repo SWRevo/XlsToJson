@@ -107,7 +107,7 @@ class JsonToExcelActivity : AppCompatActivity(), OnCrashListener {
         jsonStringData!!.setText(customers.toString())
         pathExcel = "/storage/emulated/0/Download/customers.xlsx"
         try {
-            ConvertJsonToExcel.writeObjects2ExcelFile(customers, pathExcel)
+            ConvertJsonToExcel.writeObjects2ExcelFile(customers!!, pathExcel)
             pathFileText!!.text = "Success generate and save to : $pathExcel"
             jsonStringData!!.setText(jsonStr)
             openExcelFile!!.visibility = View.VISIBLE
