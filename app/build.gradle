@@ -28,9 +28,11 @@ android {
     }
 }
 
+//noinspection SpellCheckingInspection
 dependencies {
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.11.0'
+    //implementation 'com.fasterxml.jackson.core:jackson-databind:2.11.0'
     implementation files('libs/poishadow-all.jar')
+
     implementation project(path:':fileutil')
     implementation project(":jsonviewer")
     implementation project(path:':crashreport')
@@ -50,9 +52,9 @@ dependencies {
     //implementation files('libs/commons-codec-1.10.jar')
     //implementation files('libs/commons-collections4-4.1.jar')
     //implementation files('libs/curvesapi-1.04.jar')
-    //implementation files('libs/jackson-annotations-2.11.0.jar')
-    //implementation files('libs/jackson-core-2.11.0.jar')
-    //implementation files('libs/jackson-databind-2.11.0.jar')
+    implementation files('libs/jackson-annotations-2.11.0.jar')
+    implementation files('libs/jackson-core-2.11.0.jar')
+    implementation files('libs/jackson-databind-2.11.0.jar')
     //implementation files('libs/poi-3.17.jar')
     //implementation files('libs/poi-ooxml-3.17.jar')
     //implementation files('libs/poi-ooxml-schemas-3.17.jar')

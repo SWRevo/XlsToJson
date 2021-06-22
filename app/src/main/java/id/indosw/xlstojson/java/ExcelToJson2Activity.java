@@ -90,13 +90,7 @@ public class ExcelToJson2Activity extends AppCompatActivity implements Crasher.O
     }
 
     private void taskConvertToJson(String file) {
-        // Step 1: Read Excel File into Java List Objects
-        List<Customer> customers = ConvertExcelToJson.readExcelFile(file);
-        // Step 2: Convert Java Objects to JSON String
-        String jsonString = ConvertExcelToJson.convertObjects2JsonString(customers);
-        System.out.println(jsonString);
-        showJsonToView(jsonString);
-        /**try {
+        try {
             // Step 1: Read Excel File into Java List Objects
             List<Customer> customers = ConvertExcelToJson.readExcelFile(file);
             // Step 2: Convert Java Objects to JSON String
@@ -106,7 +100,7 @@ public class ExcelToJson2Activity extends AppCompatActivity implements Crasher.O
         } catch (Exception e) {
             e.printStackTrace();
             pathFileText.setText(e.getMessage());
-        }**/
+        }
     }
 
     private void showJsonToView(String json) {

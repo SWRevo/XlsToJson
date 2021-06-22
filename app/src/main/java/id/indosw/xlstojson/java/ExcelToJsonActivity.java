@@ -30,7 +30,7 @@ import java.util.ArrayList;
 import id.indosw.crashreport.Crasher;
 import id.indosw.fileutil.FileUtil;
 import id.indosw.jsonviewer.JsonViewer;
-import id.indosw.xlstojson.ExcelConverter;
+import id.indosw.xlstojson.xlstojsonstring.ExcelConverter;
 import id.indosw.xlstojson.R;
 
 public class ExcelToJsonActivity extends AppCompatActivity implements Crasher.OnCrashListener {
