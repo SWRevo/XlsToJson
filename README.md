@@ -9,7 +9,7 @@ This sample implementation convert XLS to JSON
 
 # Convert JSON STRING to EXCEL File
 
-```
+```java
     @SuppressLint("SdCardPath", "SetTextI18n")
     private fun runConvertJsonToXls(s: String) {
         try {
@@ -35,7 +35,7 @@ This sample implementation convert XLS to JSON
 # Convert EXCEL File to JSON STRING
 
 
-```
+```java
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<String>,
